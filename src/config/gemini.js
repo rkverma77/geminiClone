@@ -1,7 +1,7 @@
 import { GoogleGenAI } from "@google/genai";
 
 const ai = new GoogleGenAI({
-  apiKey: API_KEY, // hardcoded for now
+  apiKey: import.meta.env.VITE_GEMINI_API_KEY,
 });
 
 async function main(prompt) {
@@ -13,12 +13,7 @@ async function main(prompt) {
 
     const text = response?.candidates?.[0]?.content?.parts?.[0]?.text;
 
-    // Sanitize and return safe string
-    if (typeof text === "string") {
-      return text.trim() || " ";
-    } else {
-      return " ";
-    }
+    return typeof text === "string" ? text.trim() || " " : " ";
   } catch (error) {
     console.error("Gemini API Error:", error);
     return " ";
