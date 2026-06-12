@@ -78,6 +78,12 @@ const Main = () => {
           <div className="search-box">
             <input
               onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && !e.shiftKey && input.trim()) {
+                  e.preventDefault();
+                  onSent();
+                }
+              }}
               value={input}
               type="text"
               placeholder="Enter a promt here"
