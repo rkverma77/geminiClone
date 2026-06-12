@@ -180,6 +180,64 @@
   line-height: 1.5;
 }
 
+.result-data p{
+  margin: 0 0 12px 0;
+}
+
+.result-data p:last-child{
+  margin-bottom: 0;
+}
+
+.result-data h1,
+.result-data h2,
+.result-data h3,
+.result-data h4,
+.result-data h5,
+.result-data h6{
+  margin: 16px 0 8px 0;
+  line-height: 1.3;
+}
+
+.result-data h1{ font-size: 28px; }
+.result-data h2{ font-size: 24px; }
+.result-data h3{ font-size: 20px; }
+.result-data h4,
+.result-data h5,
+.result-data h6{ font-size: 17px; }
+
+.result-data ul,
+.result-data ol{
+  margin: 0 0 12px 0;
+  padding-left: 24px;
+}
+
+.result-data li{
+  margin-bottom: 6px;
+}
+
+.result-data code{
+  background-color: #f0f4f9;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-family: "Courier New", monospace;
+  font-size: 0.9em;
+}
+
+.result-data pre{
+  background-color: #f0f4f9;
+  border-radius: 8px;
+  padding: 14px;
+  overflow-x: auto;
+  margin: 0 0 12px 0;
+}
+
+.result-data pre code{
+  background: none;
+  padding: 0;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
 @media (max-width : 600px){
   .main-bottom input{
     flex:none;
